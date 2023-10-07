@@ -34,7 +34,7 @@
 }
 
 .converter-container {
-position: relative;
+    position: relative;
     width: 100%;
     height: 100%;
     display: flex;
@@ -271,14 +271,15 @@ main {
     cursor: pointer;
 }
 
-.select-btn .angle {
+.select-btn .angle svg{
+    width: 18px;
     margin-right: 10px;
     transform: rotate(-90deg);
     transition: transform 0.3s linear;
 }
 
-.unit-container.active .select-btn .angle {
-    transform: rotate(90deg);
+.unit-container.active .select-btn .angle svg{
+    transform: rotate(-270deg);
 }
 
 .content {
@@ -304,22 +305,12 @@ main {
     position: relative;
 }
 
-.search i {
+.search .search-icon svg{
     position: absolute;
-    left: 15px;
-    font-size: 20px;
-    color: #999;
+    top: 5px;
+    width: 40px;
+    fill: #999;
     line-height: 53px;
-}
-
-.search .search-icon {
-    position: absolute;
-    left: 15px;
-    font-size: 26px;
-    color: #999;
-    line-height: 53px;
-    -webkit-transform: scaleX(-1);
-    transform: scaleX(-1);
 }
 
 .search input {
@@ -486,11 +477,11 @@ label {
 
     .form {
     grid-template-columns: 1fr;
-    grid-template-rows: 20vw 20vw 25vw 20vw 35vw;
+    /* grid-template-rows: 20vw 20vw 25vw 25vw 35vw; */
     /* grid-template-rows: auto auto auto auto auto; */
-    /* grid-template-rows: auto auto auto auto auto; */
+    grid-template-rows: auto auto auto auto auto;
     place-items: center;
-    height: auto;
+    /* height: auto; */
     }
 
     .unit-container {
@@ -514,10 +505,10 @@ label {
 
 @media (max-width:560px) {
     .container {
-        min-height: fit-content;
+        /* min-height: fit-content; */
     }
     .form {
-        gap: 0;
+        gap: 1;
     }
     .select-btn {
         height: 50px;
